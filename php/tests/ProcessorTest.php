@@ -23,9 +23,9 @@ class ProcessorTest extends TestCase
      */
     public function should_give_word_count(string $words, string $expectedValue): void
     {
-        $xxx = new Processor();
+        $processor = new Processor();
 
-        $result = $xxx->analyse($words);
+        $result = $processor->analyse($words);
 
         self::assertEquals($expectedValue, $result);
     }
