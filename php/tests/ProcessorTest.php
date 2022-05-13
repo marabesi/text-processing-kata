@@ -13,7 +13,8 @@ class ProcessorTest extends TestCase
             ['Hello', '1. Hello'],
             ['Hello world', "1. Hello\n2. world"],
             ['Hello world bla', "1. Hello\n2. world\n3. bla"],
-            ['Hello world this is a long text now read me again', "1. Hello\n2. world\n3. this\n4. is\n5. a\n6. long\n7. text\n8. now\n9. read\n10. me"]
+            ['Hello world this is a long text now read me again', "1. Hello\n2. world\n3. this\n4. is\n5. a\n6. long\n7. text\n8. now\n9. read\n10. me"],
+            ['Hello world world', "1. world\n2. Hello"],
         ];
     }
 
