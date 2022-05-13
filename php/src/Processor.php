@@ -2,7 +2,7 @@
 
 namespace Kata;
 
-class TheClass
+class Processor
 {
     public function theMethod(string $words): string
     {
