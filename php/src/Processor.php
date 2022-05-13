@@ -11,9 +11,15 @@ class Processor
         $result = '';
         foreach ($exploded as $key => $value) {
             $label = $key + 1;
-            $endOfLine = sizeof($exploded) != $label ? PHP_EOL : '';
 
-            $result .= $label . ". $value" . $endOfLine;
+            if ($label < 10) {
+                $endOfLine = sizeof($exploded) != $label ? PHP_EOL : '';
+            }
+
+            if ($label <= 10) {
+                $result .= $label . ". $value" . $endOfLine;
+                $endOfLine = '';
+            }
         }
 
         return $result;
