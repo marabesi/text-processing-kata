@@ -4,7 +4,7 @@ namespace Kata;
 
 class Processor
 {
-    public function theMethod(string $words): string
+    public function analyse(string $words): string
     {
         $exploded = explode(' ', $words);
 

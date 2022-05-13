@@ -14,7 +14,7 @@ class MyClassTest extends TestCase
 
         $words = 'Hello';
 
-        $result = $xxx->theMethod($words);
+        $result = $xxx->analyse($words);
 
         self::assertEquals('1. Hello', $result);
     }
@@ -26,7 +26,7 @@ class MyClassTest extends TestCase
 
         $words = 'Hello world';
 
-        $result = $xxx->theMethod($words);
+        $result = $xxx->analyse($words);
 
         self::assertEquals("1. Hello\n2. world", $result);
     }
