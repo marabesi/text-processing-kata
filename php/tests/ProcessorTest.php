@@ -7,27 +7,26 @@ use PHPUnit\Framework\TestCase;
 
 class ProcessorTest extends TestCase
 {
-    /** @test */
-    public function give_me_a_good_name_please(): void
-    {
-        $xxx = new Processor();
 
-        $words = 'Hello';
-
-        $result = $xxx->analyse($words);
-
-        self::assertEquals('1. Hello', $result);
+    function dataProvider() {
+        return [
+            ['Hello', '1. Hello'],
+            ['Hello world', "1. Hello\n2. world"],
+            ['Hello world bla', "1. Hello\n2. world\n3. bla"],
+            ['Hello world this is a long text now read me again', "1. Hello\n2. world\n3. this\n4. is\n5. a\n6. long\n7. text\n8. now\n9. read\n10. me"]
+        ];
     }
 
-    /** @test */
-    public function given_a_text_of_two_words_return_two_items_in_the_list(): void
+    /**
+     * @test
+     * @dataProvider dataProvider
+     */
+    public function should_give_word_count(string $words, string $expectedValue): void
     {
         $xxx = new Processor();
 
-        $words = 'Hello world';
-
         $result = $xxx->analyse($words);
 
-        self::assertEquals("1. Hello\n2. world", $result);
+        self::assertEquals($expectedValue, $result);
     }
 }
