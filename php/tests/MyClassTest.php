@@ -18,4 +18,16 @@ class MyClassTest extends TestCase
 
         self::assertEquals('1. Hello', $result);
     }
+
+    /** @test */
+    public function given_a_text_of_two_words_return_two_items_in_the_list(): void
+    {
+        $xxx = new TheClass();
+
+        $words = 'Hello world';
+
+        $result = $xxx->theMethod($words);
+
+        self::assertEquals("1. Hello \n2. world", $result);
+    }
 }
