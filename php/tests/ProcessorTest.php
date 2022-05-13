@@ -5,7 +5,7 @@ namespace KataTests;
 use Kata\Processor;
 use PHPUnit\Framework\TestCase;
 
-class MyClassTest extends TestCase
+class ProcessorTest extends TestCase
 {
     /** @test */
     public function give_me_a_good_name_please(): void
