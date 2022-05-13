@@ -28,6 +28,6 @@ class MyClassTest extends TestCase
 
         $result = $xxx->theMethod($words);
 
-        self::assertEquals("1. Hello \n2. world", $result);
+        self::assertEquals("1. Hello\n2. world", $result);
     }
 }
