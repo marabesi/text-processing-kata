@@ -4,8 +4,8 @@ namespace Kata;
 
 class TheClass
 {
-    public function theMethod(): bool
+    public function theMethod(string $words): string
     {
-        return true;
+        return "1. $words";
     }
 }

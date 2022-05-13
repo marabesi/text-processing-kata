@@ -12,8 +12,10 @@ class MyClassTest extends TestCase
     {
         $xxx = new TheClass();
 
-        $result = $xxx->theMethod();
+        $words = 'Hello';
 
-        self::assertEquals(true, $result);
+        $result = $xxx->theMethod($words);
+
+        self::assertEquals('1. Hello', $result);
     }
 }
